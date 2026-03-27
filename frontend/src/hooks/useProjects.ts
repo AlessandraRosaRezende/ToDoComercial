@@ -103,3 +103,8 @@ export async function createPerson(data: { name: string; email: string; role: st
 export async function deletePerson(id: string) {
   await api.delete(`/api/people/${id}`)
 }
+
+export async function updatePerson(id: string, data: Partial<import('../types').Person>) {
+  const res = await api.put(`/api/people/${id}`, data)
+  return res.data.data as import('../types').Person
+}
