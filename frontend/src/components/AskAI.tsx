@@ -28,7 +28,7 @@ Você é um assistente especializado em gestão de projetos. Responda de forma o
 
 Contexto do projeto:
 - Projeto: ${project.project}
-- Subproduto: ${project.subproduct}
+- Categoria: ${project.subproduct}
 - Status: ${project.status}
 - Próximos Passos: ${project.next_steps}
 - Observações: ${project.observations}

@@ -71,7 +71,7 @@ export function ProjectForm({ project, onClose, onSaved }: Props) {
 
   const submit = async () => {
     if (!form.project.trim() || !form.subproduct.trim()) {
-      setErr('Projeto e subproduto são obrigatórios')
+      setErr('Projeto e categoria são obrigatórios')
       return
     }
     setSaving(true); setErr('')
@@ -129,11 +129,11 @@ export function ProjectForm({ project, onClose, onSaved }: Props) {
             borderRight: project ? '1px solid var(--border)' : 'none',
             display: 'flex', flexDirection: 'column', gap: 16,
           }}>
-            <Field label="Projeto / Frente *">
+            <Field label="Projeto *">
               <input style={inp} value={form.project} onChange={e => set('project', e.target.value)} placeholder="Ex: WhiteWall (Blip)" />
             </Field>
 
-            <Field label="Subproduto / Descrição *">
+            <Field label="Categoria *">
               <input style={inp} value={form.subproduct} onChange={e => set('subproduct', e.target.value)} placeholder="Ex: Atendimento Digital (MG e Nacional)" />
             </Field>
 
@@ -143,7 +143,7 @@ export function ProjectForm({ project, onClose, onSaved }: Props) {
                   {STATUSES.map(s => <option key={s} value={s}>{STATUS_CONFIG[s].label}</option>)}
                 </select>
               </Field>
-              <Field label="Prazo / Sprint">
+              <Field label="Prazo">
                 <input style={inp} value={form.deadline} onChange={e => set('deadline', e.target.value)} placeholder="Ex: 30/03/26" />
               </Field>
             </div>

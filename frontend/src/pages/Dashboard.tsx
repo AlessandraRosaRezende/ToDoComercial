@@ -122,7 +122,7 @@ export function Dashboard() {
         {/* Search */}
         <div style={{ marginBottom: 24, position: 'relative' }}>
           <input
-            placeholder="🔍  Buscar por projeto, subproduto ou observação..."
+            placeholder="🔍  Buscar por projeto, categoria ou observação..."
             value={search} onChange={e => setSearch(e.target.value)}
             style={{ width: '100%', background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: '11px 16px', color: 'var(--text)', fontSize: 14, outline: 'none' }}
           />
